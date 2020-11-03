@@ -11,9 +11,13 @@ window.onload = function () {
 }
 
 function createHeaderElement() {
+  // crear un elemento/etiqueta h1
   const heading = document.createElement("h1");
+  // crear un texto 
   const heading_text = document.createTextNode("Hola");
+  // agregar el texto a la etiqueta heading h1
   heading.appendChild(heading_text);
+  // agregar la etiqueta heading h1 al body del documente html
   document.body.appendChild(heading);
 
 }
@@ -34,7 +38,7 @@ function createInputs() {
     el.setAttribute("type", "text")
     el.setAttribute("name", i == 1 ? "name" : "email")
     el.onchange = handleInputChange
-    el.onkeydown displayCurrentText
+    el.onkeydown = displayCurrentText
     document.body.appendChild(el)
   })
 }
